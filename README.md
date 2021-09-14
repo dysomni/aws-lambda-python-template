@@ -5,8 +5,8 @@ This repo is a template for deploying a ruby lambda function on AWS. Great if al
 
  - The AWS CLI installed on your local development machine
  - An AWS bucket for uploading your source code
-	 - (If you would like to skip using the bucket, reference the
-   [update-function-code](https://docs.aws.amazon.com/cli/latest/reference/lambda/update-function-code.html) command for the AWS CLI and update the needed arguments to upload the zip file directly within the `config/deploy.sh` script)
+	 - *If you would like to skip using the bucket, reference the
+   [update-function-code](https://docs.aws.amazon.com/cli/latest/reference/lambda/update-function-code.html) command for the AWS CLI and update the needed arguments to upload the zip file directly within the `config/deploy.sh` script*
  - Ruby 2.7
  - Bundler
 
