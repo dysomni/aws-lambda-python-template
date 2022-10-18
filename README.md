@@ -10,11 +10,14 @@ This repo is a template for deploying a python lambda function on AWS. Great if 
  - Python 3.9
  - Docker
 
+## Tech Notes
+ - In this repo I use us-east-1. Change where necessary.
+
 ## Getting started
 
  1. Create a Lambda function from the AWS console or CLI. Make sure it
     has the default permissions for a Lambda, unless you plan on
-    utilizing the AWS SDK from within your function.
+    utilizing the AWS SDK from within your function. Use ARM architecture.
  2. Create lambda URL
  3. Copy over the sample env file to `.env` and fill in the relevant
     fields.

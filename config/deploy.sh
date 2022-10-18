@@ -17,9 +17,11 @@ aws lambda update-function-code \
   --function-name "${AWS_LAMBDA_NAME}" \
   --s3-bucket "${AWS_BUCKET_NAME}" \
   --s3-key "${AWS_BUCKET_PATH}/${AWS_LAMBDA_NAME}.zip"
+echo "Waiting for function code to update..."
 aws lambda wait function-updated --function-name "${AWS_LAMBDA_NAME}"
 
 aws lambda update-function-configuration --function-name "${AWS_LAMBDA_NAME}" --environment Variables="{AUTH=${AUTH}}"
+echo "Waiting for function variables to update..."
 aws lambda wait function-updated --function-name "${AWS_LAMBDA_NAME}"
 
 rm -r ./build
