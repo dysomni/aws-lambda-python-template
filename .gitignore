@@ -3,3 +3,6 @@ build/
 .env
 vendor/
 *.zip
+.venv/
+requirements.txt
+.DS_Store
