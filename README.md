@@ -6,7 +6,7 @@ This repo is a template for deploying a python lambda function on AWS. Great if 
  - The AWS CLI installed on your local development machine
  - An AWS bucket for uploading your source code
 	 - *If you would like to skip using the bucket, reference the
-   [update-function-code](https://docs.aws.amazon.com/cli/latest/reference/lambda/update-function-code.html) command for the AWS CLI and update the needed arguments to upload the zip file directly within the `config/deploy.sh` script*
+   [update-function-code](https://docs.aws.amazon.com/cli/latest/reference/lambda/update-function-code.html) command for the AWS CLI and update the needed arguments to upload the zip file directly within the `ci/deploy.sh` script*
  - Python 3.9
  - Docker
 
