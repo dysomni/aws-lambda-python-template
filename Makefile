@@ -15,9 +15,9 @@ ci/build: ci/prep
 		--rm -v $(PWD):/var/layer \
 		-w /var/layer \
 		$(registry_id).dkr.ecr.us-east-1.amazonaws.com/aws-sam-cli-build-image-python3.9:arm64 \
-		./ci/build.sh
+		./scripts/ci/build.sh
 
 ci/push:
-	./ci/deploy.sh
+	./scripts/ci/push.sh
 
 ci/deploy: ci/build ci/push
