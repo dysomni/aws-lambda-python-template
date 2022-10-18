@@ -1,9 +1,4 @@
-import os
-
-if os.environ.get('AWS_EXECUTION_ENV'):
-    import sys
-    sys.path.append('/var/task/lib/packages')
-
+import lib.startup
 from lib.event import AuthError, Event, assemble_event, validate_auth
 from lib.response import assemble_response
 
