@@ -19,6 +19,6 @@ This repo is a template for deploying a python lambda function on AWS. Great if 
  3. Copy over the sample env file to `.env` and fill in the relevant
     fields.
  4. Add packages with pipenv and code
- 5. Clone [this repo](https://github.com/dysomni/aws-sam-build-images) to store your own build images for python. Make sure your docker cli is logged in with your aws credentials. Create a private repository in AWS ECR if you havent already named `[insert aws account id here].dkr.ecr.us-east-1.amazonaws.com/aws-sam-cli-build-image-python3.9`. Then use the command `make build_python39`.
+ 5. Clone [this repo](https://github.com/dysomni/aws-sam-build-images) to store your own build images for python. Make sure your docker cli is logged in with your aws credentials. Create a private repository in AWS ECR if you haven't already named `[insert aws account id here].dkr.ecr.us-east-1.amazonaws.com/aws-sam-cli-build-image-python3.9`. Then use the command `make build_python39`.
  6. Deploy using `make ci/deploy`
  7. Pass authentication to the API endpoint within the "Authentication" HTTP header as raw, non-encoded text
