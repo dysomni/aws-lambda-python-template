@@ -7,5 +7,4 @@ vendor/
 requirements.txt
 .DS_Store
 *.tfstate*
-*terraform.lock*
-.terraform/
+tf/.terraform/
