@@ -6,18 +6,19 @@ repl:
 install:
 	pipenv install
 
-ci/prep:
+prep:
 	pipenv install
 	pipenv requirements > requirements.txt
 
-ci/build: ci/prep
+build: prep
 	docker run \
 		--rm -v $(PWD):/var/layer \
 		-w /var/layer \
 		$(registry_id).dkr.ecr.us-east-1.amazonaws.com/aws-sam-cli-build-image-python3.9:arm64 \
 		./scripts/ci/build.sh
 
-ci/push:
-	./scripts/ci/push.sh
+package:
+	./scripts/ci/package.sh
 
-ci/deploy: ci/build ci/push
+deploy: build package
+	./scripts/ci/deploy.sh

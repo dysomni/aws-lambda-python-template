@@ -1,0 +1,27 @@
+variable "AWS_LAMBDA_NAME" {
+  type        = string
+  description = "Name of the lambda."
+}
+
+variable "AUTH" {
+  type        = string
+  description = "The string used to authenticate the lambda."
+  sensitive   = true
+}
+
+variable "SECURITY_GROUP_IDS" {
+  type        = list(string)
+  description = "The IDs of the security groups to associate with the lambda."
+}
+
+variable "SUBNET_IDS" {
+  type        = list(string)
+  description = "The IDs of the subnets to associate with the lambda."
+}
+
+
+data "aws_iam_policy" "AWSLambdaVPCAccessExecutionRole" {
+  arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
+}
+
+data "aws_caller_identity" "current" {}

@@ -7,7 +7,7 @@ from lib.response import assemble_response
 @validate_auth
 def lambda_handler(event: Event):
     try:
-        return assemble_response(body={'success': True}, code=200)
+        return assemble_response(body={'success': True, 'event': event}, code=200)
     except Exception as e:
         return assemble_response(body={'success': False, 'message': str(e)}, code=500)
 
